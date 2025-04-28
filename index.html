@@ -1,1 +1,104 @@
-Hello world
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cross-Language Syntax Notes</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #eee;
+      font-family: monospace;
+      padding: 20px;
+    }
+    .syntax-table {
+      border: 1px solid #444;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .section-title {
+      background: #222;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .language-header {
+      display: flex;
+      background: #333;
+      color: #eee;
+      padding: 8px;
+      font-weight: bold;
+    }
+    .language-header div {
+      flex: 1;
+      text-align: center;
+    }
+    .code-row {
+      display: flex;
+      padding: 8px;
+      background: #111;
+      color: #eee;
+    }
+    .code-row div {
+      flex: 1;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="text-align:center;">Cross-Language Syntax Notes</h1>
+
+  <div class="syntax-table">
+
+    <!-- Variable Assignments Section -->
+    <div class="section-title">Variable Assignments</div>
+    <div class="language-header">
+      <div>Python</div>
+      <div>PHP</div>
+      <div>Linux Bash Shell</div>
+      <div>GoLang</div>
+    </div>
+    <div class="code-row">
+      <div>x = 5</div>
+      <div>$x = 5;</div>
+      <div>x=5</div>
+      <div>var x int = 5</div>
+    </div>
+
+    <!-- Function Definition Section -->
+    <div class="section-title">Function Definition</div>
+    <div class="language-header">
+      <div>Python</div>
+      <div>PHP</div>
+      <div>Linux Bash Shell</div>
+      <div>GoLang</div>
+    </div>
+    <div class="code-row">
+      <div>def func():</div>
+      <div>function func() {}</div>
+      <div>func() {}</div>
+      <div>func func() {}</div>
+    </div>
+
+    <!-- Conditional Section -->
+    <div class="section-title">Conditional</div>
+    <div class="language-header">
+      <div>Python</div>
+      <div>PHP</div>
+      <div>Linux Bash Shell</div>
+      <div>GoLang</div>
+    </div>
+    <div class="code-row">
+      <div>if x == 5:</div>
+      <div>if ($x == 5) {}</div>
+      <div>if [ "$x" -eq 5 ]; then</div>
+      <div>if x == 5 {}</div>
+    </div>
+
+  </div>
+
+</body>
+</html>
+
