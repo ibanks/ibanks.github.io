@@ -44,6 +44,12 @@
       flex: 1;
       text-align: center;
     }
+    .code-row .syntax-option {
+      text-align: center;
+      background: #444;
+      color: #fff;
+      padding: 8px;
+    }
   </style>
 </head>
 <body>
@@ -55,12 +61,14 @@
     <!-- Variable Assignments Section -->
     <div class="section-title">Variable Assignments</div>
     <div class="language-header">
+      <div>Syntax Option</div>
       <div>Python</div>
       <div>PHP</div>
       <div>Linux Bash Shell</div>
       <div>GoLang</div>
     </div>
     <div class="code-row">
+      <div class="syntax-option">N/A</div>
       <div>x = 5</div>
       <div>$x = 5;</div>
       <div>x=5</div>
@@ -70,31 +78,56 @@
     <!-- Function Definition Section -->
     <div class="section-title">Function Definition</div>
     <div class="language-header">
+      <div>Syntax Option</div>
       <div>Python</div>
       <div>PHP</div>
       <div>Linux Bash Shell</div>
       <div>GoLang</div>
     </div>
     <div class="code-row">
+      <div class="syntax-option">Option 1</div>
       <div>def func():</div>
       <div>function func() {}</div>
       <div>func() {}</div>
       <div>func func() {}</div>
     </div>
+    <div class="code-row">
+      <div class="syntax-option">Option 2</div>
+      <div>def func(arg):</div>
+      <div>function func(arg) {}</div>
+      <div>func(arg) {}</div>
+      <div>func(arg) {}</div>
+    </div>
 
     <!-- Conditional Section -->
     <div class="section-title">Conditional</div>
     <div class="language-header">
+      <div>Syntax Option</div>
       <div>Python</div>
       <div>PHP</div>
       <div>Linux Bash Shell</div>
       <div>GoLang</div>
     </div>
     <div class="code-row">
+      <div class="syntax-option">Option 1</div>
       <div>if x == 5:</div>
       <div>if ($x == 5) {}</div>
       <div>if [ "$x" -eq 5 ]; then</div>
       <div>if x == 5 {}</div>
+    </div>
+    <div class="code-row">
+      <div class="syntax-option">Option 2</div>
+      <div>if x != 5:</div>
+      <div>if ($x != 5) {}</div>
+      <div>if [ "$x" -ne 5 ]; then</div>
+      <div>if x != 5 {}</div>
+    </div>
+    <div class="code-row">
+      <div class="syntax-option">Option 3</div>
+      <div>if x < 5:</div>
+      <div>if ($x < 5) {}</div>
+      <div>if [ "$x" -lt 5 ]; then</div>
+      <div>if x < 5 {}</div>
     </div>
 
   </div>
