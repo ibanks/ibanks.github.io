@@ -22,7 +22,7 @@
       padding: 10px;
       text-align: center;
       font-weight: bold;
-      margin-top: 50px;  /* Added space between sections */
+      margin-top: 50px;
     }
     .language-header {
       display: flex;
@@ -45,16 +45,31 @@
       flex: 1;
       text-align: center;
     }
+    /* Search bar styles */
+    #searchBox {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 10px;
+      font-size: 14px;
+      background-color: #333;
+      border: 1px solid #444;
+      color: #eee;
+      border-radius: 5px;
+    }
   </style>
 </head>
 <body>
 
   <h1 style="text-align:center;">Cross-Language Syntax Notes</h1>
 
-  <div class="syntax-table">
+  <!-- Search Field -->
+  <input type="text" id="searchBox" placeholder="Search for a section..." onkeyup="searchSection()" />
+
+  <div class="syntax-table" id="syntaxTable">
 
     <!-- Variable Assignments Section -->
-    <div class="section-title">Variable Assignments</div>
+    <div class="section-title" data-section="variable-assignments">Variable Assignments</div>
     <div class="language-header">
       <div>Python</div>
       <div>PHP</div>
@@ -69,7 +84,7 @@
     </div>
 
     <!-- Function Definition Section -->
-    <div class="section-title">Function Definition</div>
+    <div class="section-title" data-section="function-definition">Function Definition</div>
     <div class="language-header">
       <div>Python</div>
       <div>PHP</div>
@@ -84,7 +99,7 @@
     </div>
 
     <!-- Conditional (If) Section -->
-    <div class="section-title">Conditional (If)</div>
+    <div class="section-title" data-section="conditional-if">Conditional (If)</div>
     <div class="language-header">
       <div>Python</div>
       <div>PHP</div>
@@ -99,7 +114,7 @@
     </div>
 
     <!-- Conditional (If/Else) Section -->
-    <div class="section-title">Conditional (If/Else)</div>
+    <div class="section-title" data-section="conditional-ifelse">Conditional (If/Else)</div>
     <div class="language-header">
       <div>Python</div>
       <div>PHP</div>
@@ -120,7 +135,7 @@
     </div>
 
     <!-- For-Loops Section -->
-    <div class="section-title">For-Loops</div>
+    <div class="section-title" data-section="for-loops">For-Loops</div>
     <div class="language-header">
       <div>Python</div>
       <div>PHP</div>
@@ -141,6 +156,36 @@
     </div>
 
   </div>
+
+  <script>
+    function searchSection() {
+      let input = document.getElementById('searchBox').value.toLowerCase();
+      let sections = document.querySelectorAll('.section-title');
+      
+      sections.forEach(function(section) {
+        let sectionText = section.innerText.toLowerCase();
+        if (sectionText.includes(input)) {
+          section.style.display = '';
+        } else {
+          section.style.display = 'none';
+        }
+      });
+
+      // Toggle visibility of rows associated with the sections
+      let rows = document.querySelectorAll('.section-title');
+      rows.forEach(function(row) {
+        let sectionId = row.getAttribute('data-section');
+        let associatedRow = document.querySelectorAll(`[data-section="${sectionId}"]`);
+        associatedRow.forEach(function(item) {
+          if (item.querySelector('.section-title')) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    }
+  </script>
 
 </body>
 </html>
