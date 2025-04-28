@@ -44,12 +44,6 @@
       flex: 1;
       text-align: center;
     }
-    .code-row .syntax-option {
-      text-align: center;
-      background: #444;
-      color: #fff;
-      padding: 8px;
-    }
   </style>
 </head>
 <body>
@@ -61,14 +55,12 @@
     <!-- Variable Assignments Section -->
     <div class="section-title">Variable Assignments</div>
     <div class="language-header">
-      <div>Syntax Option</div>
       <div>Python</div>
       <div>PHP</div>
       <div>Linux Bash Shell</div>
       <div>GoLang</div>
     </div>
     <div class="code-row">
-      <div class="syntax-option">Option 1</div>
       <div>x = 5</div>
       <div>$x = 5;</div>
       <div>x=5</div>
@@ -78,76 +70,69 @@
     <!-- Function Definition Section -->
     <div class="section-title">Function Definition</div>
     <div class="language-header">
-      <div>Syntax Option</div>
       <div>Python</div>
       <div>PHP</div>
       <div>Linux Bash Shell</div>
       <div>GoLang</div>
     </div>
     <div class="code-row">
-      <div class="syntax-option">Option 1</div>
       <div>def func():</div>
       <div>function func() {}</div>
       <div>func() {}</div>
       <div>func func() {}</div>
     </div>
-    <div class="code-row">
-      <div class="syntax-option">Option 2</div>
-      <div>def func(arg):</div>
-      <div>function func(arg) {}</div>
-      <div>func(arg) {}</div>
-      <div>func(arg) {}</div>
-    </div>
 
-    <!-- Conditional Section -->
-    <div class="section-title">Conditional</div>
+    <!-- Conditional (If) Section -->
+    <div class="section-title">Conditional (If)</div>
     <div class="language-header">
-      <div>Syntax Option</div>
       <div>Python</div>
       <div>PHP</div>
       <div>Linux Bash Shell</div>
       <div>GoLang</div>
     </div>
     <div class="code-row">
-      <div class="syntax-option">Option 1</div>
+      <div>if x == 5:</div>
+      <div>if ($x == 5) {}</div>
+      <div>if [ "$x" -eq 5 ]; then</div>
+      <div>if x == 5 {}</div>
+    </div>
+
+    <!-- Conditional (If/Else) Section -->
+    <div class="section-title">Conditional (If/Else)</div>
+    <div class="language-header">
+      <div>Python</div>
+      <div>PHP</div>
+      <div>Linux Bash Shell</div>
+      <div>GoLang</div>
+    </div>
+    <div class="code-row">
       <div>if x == 5:</div>
       <div>if ($x == 5) {}</div>
       <div>if [ "$x" -eq 5 ]; then</div>
       <div>if x == 5 {}</div>
     </div>
     <div class="code-row">
-      <div class="syntax-option">Option 2</div>
-      <div>if x != 5:</div>
-      <div>if ($x != 5) {}</div>
-      <div>if [ "$x" -ne 5 ]; then</div>
-      <div>if x != 5 {}</div>
-    </div>
-    <div class="code-row">
-      <div class="syntax-option">Option 3</div>
-      <div>if x < 5:</div>
-      <div>if ($x < 5) {}</div>
-      <div>if [ "$x" -lt 5 ]; then</div>
-      <div>if x < 5 {}</div>
+      <div>else:</div>
+      <div>else {}</div>
+      <div>else</div>
+      <div>else {}</div>
     </div>
 
     <!-- For-Loops Section -->
     <div class="section-title">For-Loops</div>
     <div class="language-header">
-      <div>Syntax Option</div>
       <div>Python</div>
       <div>PHP</div>
       <div>Linux Bash Shell</div>
       <div>GoLang</div>
     </div>
     <div class="code-row">
-      <div class="syntax-option">Option 1</div>
       <div>for i in range(5):</div>
       <div>for ($i = 0; $i < 5; $i++) {}</div>
       <div>for i in {1..5}; do</div>
       <div>for i := 0; i < 5; i++</div>
     </div>
     <div class="code-row">
-      <div class="syntax-option">Option 2</div>
       <div>for i in list:</div>
       <div>foreach ($array as $item) {}</div>
       <div>for item in "${array[@]}"; do</div>
@@ -158,4 +143,3 @@
 
 </body>
 </html>
-
