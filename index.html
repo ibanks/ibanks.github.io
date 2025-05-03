@@ -22,7 +22,7 @@
       padding: 10px;
       text-align: center;
       font-weight: bold;
-      margin-top: 50px;  /* Added space between sections */
+      margin-top: 50px;
     }
     .language-header {
       display: flex;
@@ -42,6 +42,20 @@
       color: #eee;
     }
     .code-row div {
+      flex: 1;
+      text-align: center;
+    }
+    /* New comment row style */
+    .comment-row {
+      display: flex;
+      padding: 8px;
+      background: #191919;
+      color: #aaa;
+      font-style: italic;
+      font-size: 14px;
+      border-top: 1px solid #333;
+    }
+    .comment-row div {
       flex: 1;
       text-align: center;
     }
@@ -77,10 +91,16 @@
       <div>GoLang</div>
     </div>
     <div class="code-row">
-      <div>def func(a, b, c=3, *args, **kwargs): return int(a) + int(b) # args is evaluated as tuple, kwargs as dictionary</div>
+      <div>def func(a, b, c=3, *args, **kwargs): return int(a) + int(b)</div>
       <div>function func($arg1, $arg2, $arg3="string") { return $arg1; }</div>
       <div>function_name () { echo $1; echo $2; }</div>
       <div>func func() {}</div>
+    </div>
+    <div class="comment-row">
+      <div>args is evaluated as tuple, kwargs as dictionary</div>
+      <div>In PHP 8.0 named arguments are introduced</div>
+      <div>Functions do not take arguments but are assigned positions ($1, $2...etc) </div>
+      <div>Explicit type declaration</div>
     </div>
 
     <!-- Conditional (If) Section -->
