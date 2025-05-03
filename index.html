@@ -51,6 +51,22 @@
       font-size: 14px;
       border-top: 1px solid #333;
     }
+    .comment-row div {
+      flex: 1;
+      padding: 0 5px;
+      text-align: left;
+    }
+
+    /* Custom class for spanning multiple columns */
+    .span-2 {
+      flex: 2;
+    }
+    .span-3 {
+      flex: 3;
+    }
+    .span-4 {
+      flex: 4;
+    }
     .code-row div, .comment-row div {
       flex: 1;
       padding: 0 5px;
@@ -167,7 +183,6 @@
       <div><pre><code>for _, item := range list {}</code></pre></div>
     </div>
 
-
     <!-- While Loop Section -->
     <div class="section-title">While Loop</div>
     <div class="language-header">
@@ -178,15 +193,35 @@
     </div>
     <div class="code-row">
       <div><pre><code>
+      i = 0
       while i < 6:
         i += 1
         if i == 3:
           continue
         print(i)
       </code></pre></div>
-      <div><pre><code>for ($i = 0; $i < 5; $i++) {}</code></pre></div>
-      <div><pre><code>for i in {1..5}; do</code></pre></div>
-      <div><pre><code>for i := 0; i < 5; i++ {}</code></pre></div>
+      <div><pre><code>
+      $i = 1;
+      while ($i < 6) {
+        echo $i;
+        $i++;
+      }
+      </code></pre></div>
+      <div><pre><code>
+        x=1
+        while [ $x -le ]
+        do
+          echo "Welcome $x times"
+          x=$( ( $x + 1 ) )
+        done
+      </code></pre></div>
+      <div><pre><code>N/A</code></pre></div>
+    </div>
+    <div class="comment-row">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div>GoLang does not use while loops only for loop </div>
     </div>
 
   </div>
