@@ -35,29 +35,35 @@
       flex: 1;
       text-align: center;
     }
-    .code-row {
+    .code-row, .comment-row {
       display: flex;
       padding: 8px;
+    }
+    .code-row {
       background: #111;
       color: #eee;
     }
-    .code-row div {
-      flex: 1;
-      text-align: center;
-    }
-    /* New comment row style */
     .comment-row {
-      display: flex;
-      padding: 8px;
       background: #191919;
       color: #aaa;
       font-style: italic;
       font-size: 14px;
       border-top: 1px solid #333;
     }
-    .comment-row div {
+    .code-row div, .comment-row div {
       flex: 1;
-      text-align: center;
+      padding: 0 5px;
+      text-align: left;
+    }
+    pre {
+      margin: 0;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+    code {
+      display: block;
+      background: transparent;
+      color: #eee;
     }
   </style>
 </head>
@@ -76,10 +82,10 @@
       <div>GoLang</div>
     </div>
     <div class="code-row">
-      <div>x = 5</div>
-      <div>$x = 5;</div>
-      <div>x=5</div>
-      <div>var x int = 5</div>
+      <div><pre><code>x = 5</code></pre></div>
+      <div><pre><code>$x = 5;</code></pre></div>
+      <div><pre><code>x=5</code></pre></div>
+      <div><pre><code>var x int = 5</code></pre></div>
     </div>
 
     <!-- Function Definition Section -->
@@ -91,10 +97,10 @@
       <div>GoLang</div>
     </div>
     <div class="code-row">
-      <div>def func_name(a, b, c=3, *args, **kwargs): return int(a) + int(b)</div>
-      <div>function func_name($arg1, $arg2, $arg3="string") { return $arg1; }</div>
-      <div>func_name () { echo $1; echo $2; }</div>
-      <div>func func_name(param Type) returnType { return "value" }</div>
+      <div><pre><code>def func_name(a, b, c=3, *args, **kwargs): return int(a) + int(b)</code></pre></div>
+      <div><pre><code>function func_name($arg1, $arg2, $arg3="string") { return $arg1; }</code></pre></div>
+      <div><pre><code>func_name () { echo $1; echo $2; }</code></pre></div>
+      <div><pre><code>func func_name(param Type) returnType { return "value" }</code></pre></div>
     </div>
     <div class="comment-row">
       <div>args is evaluated as tuple, kwargs as dictionary</div>
@@ -112,10 +118,10 @@
       <div>GoLang</div>
     </div>
     <div class="code-row">
-      <div>if x == 5:</div>
-      <div>if ($x == 5) {}</div>
-      <div>if [ "$x" -eq 5 ]; then</div>
-      <div>if x == 5 {}</div>
+      <div><pre><code>if x == 5:</code></pre></div>
+      <div><pre><code>if ($x == 5) {}</code></pre></div>
+      <div><pre><code>if [ "$x" -eq 5 ]; then</code></pre></div>
+      <div><pre><code>if x == 5 {}</code></pre></div>
     </div>
 
     <!-- Conditional (If/Else) Section -->
@@ -127,16 +133,16 @@
       <div>GoLang</div>
     </div>
     <div class="code-row">
-      <div>if x == 5:</div>
-      <div>if ($x == 5) {}</div>
-      <div>if [ "$x" -eq 5 ]; then</div>
-      <div>if x == 5 {}</div>
+      <div><pre><code>if x == 5:</code></pre></div>
+      <div><pre><code>if ($x == 5) {}</code></pre></div>
+      <div><pre><code>if [ "$x" -eq 5 ]; then</code></pre></div>
+      <div><pre><code>if x == 5 {}</code></pre></div>
     </div>
     <div class="code-row">
-      <div>else:</div>
-      <div>else {}</div>
-      <div>else</div>
-      <div>else {}</div>
+      <div><pre><code>else:</code></pre></div>
+      <div><pre><code>else {}</code></pre></div>
+      <div><pre><code>else</code></pre></div>
+      <div><pre><code>else {}</code></pre></div>
     </div>
 
     <!-- For-Loops Section -->
@@ -148,16 +154,16 @@
       <div>GoLang</div>
     </div>
     <div class="code-row">
-      <div>for i in range(5):</div>
-      <div>for ($i = 0; $i < 5; $i++) {}</div>
-      <div>for i in {1..5}; do</div>
-      <div>for i := 0; i < 5; i++ {}</div>
+      <div><pre><code>for i in range(5):</code></pre></div>
+      <div><pre><code>for ($i = 0; $i < 5; $i++) {}</code></pre></div>
+      <div><pre><code>for i in {1..5}; do</code></pre></div>
+      <div><pre><code>for i := 0; i < 5; i++ {}</code></pre></div>
     </div>
     <div class="code-row">
-      <div>for i in list:</div>
-      <div>foreach ($array as $item) {}</div>
-      <div>for item in "${array[@]}"; do</div>
-      <div>for _, item := range list {}</div>
+      <div><pre><code>for i in list:</code></pre></div>
+      <div><pre><code>foreach ($array as $item) {}</code></pre></div>
+      <div><pre><code>for item in "${array[@]}"; do</code></pre></div>
+      <div><pre><code>for _, item := range list {}</code></pre></div>
     </div>
 
 
