@@ -281,6 +281,62 @@ default:
       <div></div>
       <div></div>
     </div>
+
+    <!-- HTTP Request Handling -->
+    <div class="section-title">Switch Statement</div>
+    <div class="language-header">
+      <div>Python</div>
+      <div>PHP</div>
+      <div>Linux Bash Shell</div>
+      <div>GoLang</div>
+    </div>
+    <div class="code-row">
+      <div><pre><code>
+import requests
+
+x = requests.get("")
+x = requests.post("")
+...
+      </code></pre></div>
+      <div><pre><code>
+$ch = curl_init("http://myexample.com");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_HEADER, 0);
+$data = curl_exec($ch);
+curl_close($ch);
+      </code></pre></div>
+      <div><pre><code>
+curl https://myurl.com
+      </code></pre></div>
+      <div><pre><code>
+import (
+  "net/http"
+)
+
+func main() {
+  resp, err := http.Get("https://myurl.com")
+  if err != nil {
+     log.Fatalln(err)
+  }
+  // We Read the response body on the line below.
+  body, err := io.ReadAll(resp.Body)
+  if err != nil {
+     log.Fatalln(err)
+  }
+  // Convert the body to type string
+  sb := string(body)
+  log.Printf(sb)
+}
+      </code></pre></div>
+    </div>
+    <div class="comment-row">
+      <div></div>
+      <div>PHP primarily uses the curl library for all http requests</div>
+      <div>The cli interface uses the "curl" command. View "man curl" for options.</div>
+      <div></div>
+    </div>
+
+
   </div>
 
 </body>
