@@ -283,7 +283,7 @@ default:
     </div>
 
     <!-- HTTP Request Handling -->
-    <div class="section-title">Switch Statement</div>
+    <div class="section-title">HTTP Request Handling</div>
     <div class="language-header">
       <div>Python</div>
       <div>PHP</div>
@@ -299,7 +299,7 @@ x = requests.post("")
 ...
       </code></pre></div>
       <div><pre><code>
-$ch = curl_init("http://myexample.com");
+$ch = curl_init("http://myurl.com");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_HEADER, 0);
 $data = curl_exec($ch);
@@ -316,12 +316,12 @@ import (
 func main() {
   resp, err := http.Get("https://myurl.com")
   if err != nil {
-     log.Fatalln(err)
+    log.Fatalln(err)
   }
   // We Read the response body on the line below.
   body, err := io.ReadAll(resp.Body)
   if err != nil {
-     log.Fatalln(err)
+    log.Fatalln(err)
   }
   // Convert the body to type string
   sb := string(body)
